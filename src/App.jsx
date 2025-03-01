@@ -10,16 +10,20 @@ const handleAdd=()=>{
 const handleSub=()=>{
   setCount(count-1)
 }
+const handleReset=()=>{
+  setCount(0)
+}
   return (
     <>
-    <div className="flex justify-center my-10">
+    <div className="flex justify-center my-30">
   <div className="card bg-slate-500 text-neutral-content w-96 ">
   <div className="card-body items-center text-center">
     <h2 className="card-title">COUNTER!</h2>
     <p>{count}</p>
     <div className="card-actions justify-end">
-      <button className="btn btn-primary" onClick={handleAdd} >ADD</button>
+      <button className="btn btn-ghost" onClick={handleAdd} >ADD</button>
       <button className="btn btn-ghost" onClick={handleSub}>SUB</button>
+      <button className="btn btn-primary" onClick={handleReset} >Reset</button>
     </div>
   </div>
 </div></div>
