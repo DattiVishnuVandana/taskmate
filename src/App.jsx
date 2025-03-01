@@ -5,7 +5,8 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(0)
 const handleAdd=()=>{
-  setCount(count+1)
+  setCount((count)=>count+1)
+  setCount((count)=>count+1)
 }
 const handleSub=()=>{
   setCount(count-1)
@@ -21,7 +22,7 @@ const handleReset=()=>{
     <h2 className="card-title">COUNTER!</h2>
     <p>{count}</p>
     <div className="card-actions justify-end">
-      <button className="btn btn-ghost" onClick={handleAdd} >ADD</button>
+      <button className="btn btn-ghost" onClick={handleAdd} >ADD(+2)</button>
       <button className="btn btn-ghost" onClick={handleSub}>SUB</button>
       <button className="btn btn-primary" onClick={handleReset} >Reset</button>
     </div>
