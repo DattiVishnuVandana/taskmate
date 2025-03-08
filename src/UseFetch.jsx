@@ -6,11 +6,12 @@ const UseFetch = (url) => {
     const [error,setError]=useState("")
 
  useEffect(()=>{
+    const controller=new AbortController
     const fetchData=async ()=>{
         setLoading(true);
         try{
 
-        const res=await fetch(url);
+        const res=await fetch(url,{signal:controller.signal});
         console.log(res);
         if(!res.ok){
             throw new Error(res.statusText)
@@ -25,6 +26,7 @@ const UseFetch = (url) => {
             console.log(err.message);
         }
         // console.log(result);
+        return ()=>controller.abort
     }
 
    fetchData();

@@ -5,7 +5,7 @@ import Loading from "./assets/loading.gif"
 const productList = () => {
     const [cnt,setCnt]=useState(0)
     // const [products,setProducts]=useState([]);
-    const [url,setUrl]=useState("http://localhost:8001/product/")
+    const [url,setUrl]=useState("http://localhost:8001/products/")
     // console.log(products);
     // console.log("outside useeffect-render");
    
