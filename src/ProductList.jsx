@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 
 const productList = () => {
     const [cnt,setCnt]=useState(0)
@@ -6,8 +6,14 @@ const productList = () => {
     const [url,setUrl]=useState("http://localhost:8001/products")
     // console.log(products);
     // console.log("outside useeffect-render");
+    const fetchProducts=useCallback( async ()=>{
+      const response=  await fetch(url)
+      const data=await response.json()
+      setProducts(data)
+
+    },[url])
     useEffect(()=>{
-        fetch(url).then(res=>res.json()).then(data=>setProducts(data))
+        fetchProducts()
 // console.log("useeffect render");
 
     },[url])
