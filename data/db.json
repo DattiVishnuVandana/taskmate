@@ -2,18 +2,18 @@
    "products":[{ "id":10001,
    "name":"basic to advance-react",
    "price":"200",
-   "in-stock":true},
+   "in_stock":true},
    { "id":10002,
    "name":"basic to advance-mern",
    "price":"1200",
-   "in-stock":false},
+   "in_stock":false},
    { "id":10003,
    "name":"basic to advance-django",
    "price":"300",
-   "in-stock":true},
+   "in_stock":true},
    { "id":10004,
    "name":"basic to advance-node",
    "price":"290",
-   "in-stock":false}]
+   "in_stock":false}]
     
 }
